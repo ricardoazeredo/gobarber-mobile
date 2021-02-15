@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { Platform } from 'react-native';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -6,14 +7,14 @@ export const Container = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: 0 30px;
+  padding: 0 30px ${Platform.OS === 'android' ? 180 : 40}px;
 `;
 
 export const Title = styled.Text`
   font-size: 24px;
   color: #f4ede8;
   font-family: 'RobotoSlab-Medium';
-  margin: 34px 0 24px;
+  margin: 44px 0 24px;
 `;
 
 export const ForgotPassword = styled.TouchableOpacity`
